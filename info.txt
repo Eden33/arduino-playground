@@ -1,0 +1,7 @@
+If the coes is used with Arduino IDE:
+- files directly located in lib-direcectory must be copied to C:\Users\edi\Documents\Arduino\libraries\Libraries
+- directories in lib directory must be copied to C:\Users\edi\Documents\Arduino\libraries
+
+If used with Visual Studio Code
+- install "Arduino Extension"
+- in Sketch press F1 and upload
