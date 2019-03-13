@@ -1,9 +1,9 @@
 #include <Flasher2.h>
 #include <Sweeper2.h>
 
-Flasher2 led1(12, 500, 1000);
-Flasher2 led2(13, 1000, 1000);
-Sweeper2 servo(100);
+Flasher2 led1(12, 1000, 2000);
+Flasher2 led2(13, 2000, 2000);
+Sweeper2 servo(200);
 
 void setup()
 {

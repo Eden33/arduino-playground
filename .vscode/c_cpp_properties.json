@@ -3,14 +3,10 @@
         {
             "name": "Win32",
             "includePath": [
-                "C:\\Program Files (x86)\\Arduino\\hardware\\**",
+                "C:/Program Files (x86)/Arduino/hardware/**",
                 "${workspaceFolder}/**"
             ],
-            "defines": [
-                "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
-            ],
+            "defines": ["ARDUINO_ARCH_AVR"],
             "compilerPath": "/usr/bin/gcc",
             "cStandard": "c11",
             "cppStandard": "c++17",
