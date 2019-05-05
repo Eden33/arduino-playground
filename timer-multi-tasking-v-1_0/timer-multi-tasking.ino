@@ -21,7 +21,7 @@ void setup()
 
 // The timer interrupt is executed once a millisecond to update the LEDs and the servo.
 // The servo is not updated if the button on PIN 2 is pressed.
-SIGNAL(TIMER0_COMPA_vect) 
+ISR(TIMER0_COMPA_vect) 
 {
   unsigned long currentMillis = millis();
   
