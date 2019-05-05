@@ -6,4 +6,4 @@ This project contains several Arduino sketches.
 
 ![timer-multi-tasking-v_1_1.gif](timer-multi-tasking-v_1_1/timer-multi-tasking-v_1_1.gif)
 
-![timer-multi-tasking-v_1_1.fzz](timer-multi-tasking-v_1_1/timer-multi-tasking-v_1_1.png)
+![timer-multi-tasking-v_1_1.fzz](timer-multi-tasking-v_1_1/timer-multi-tasking-v_1_1_bb.png)
