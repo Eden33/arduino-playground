@@ -1,0 +1,6 @@
+{
+    "board": "arduino:avr:uno",
+    "port": "COM3",
+    "sketch": "distance-measurement.ino",
+    "output": "build"
+}

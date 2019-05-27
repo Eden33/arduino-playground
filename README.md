@@ -32,3 +32,13 @@ To compile this sketch you must install this Arduino libraries first:
 ![timer-multi-tasking-v_1_1.gif](timer-multi-tasking-v_1_1/timer-multi-tasking-v_1_1.gif)
 
 ![timer-multi-tasking-v_1_1.png](timer-multi-tasking-v_1_1/timer-multi-tasking-v_1_1_bb.png)
+
+## distance-measurement-v-1_0
+
+This sketch uses an HC-SR04 to measure the distance to objects in front of it.
+The distance is printed to the serial output.
+
+![distance-measurement-v-1_0_bb.png](distance-measurement-v-1_0/distance-measurement-v-1_0_bb.png)
+
+
+
