@@ -21,7 +21,7 @@ To compile this sketch you must install this Arduino libraries first:
 - [Sweeper2 Arduino lib] (https://github.com/Eden33/arduino-lib-sweeper2)
 - [Flasher2 Arduino lib] (https://github.com/Eden33/arduino-lib-flasher2)
 
-## timer-multi-tasking-v_1_1
+## timer-multi-tasking-v-1_1
 
 This sketch is an extended version of timer-multi-tasking-v_1_0. Instead of preventing the update of the servo a reset is executed each time the button is pressed. This behavior is triggered by an external interrupt handler registered on pin 2.
 
@@ -29,9 +29,9 @@ To compile this sketch you must install this Arduino libraries first:
 - [Sweeper2 Arduino lib] (https://github.com/Eden33/arduino-lib-sweeper2)
 - [Flasher2 Arduino lib] (https://github.com/Eden33/arduino-lib-flasher2)
 
-![timer-multi-tasking-v_1_1.gif](timer-multi-tasking-v_1_1/timer-multi-tasking-v_1_1.gif)
+![timer-multi-tasking-v_1_1.gif](timer-multi-tasking-v-1_1/timer-multi-tasking-v-1_1.gif)
 
-![timer-multi-tasking-v_1_1.png](timer-multi-tasking-v_1_1/timer-multi-tasking-v_1_1_bb.png)
+![timer-multi-tasking-v_1_1.png](timer-multi-tasking-v-1_1/timer-multi-tasking-v-1_1_bb.png)
 
 ## distance-measurement-v-1_0
 
