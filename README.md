@@ -40,5 +40,11 @@ The distance is printed to the serial output.
 
 ![distance-measurement-v-1_0_bb.png](distance-measurement-v-1_0/distance-measurement-v-1_0_bb.png)
 
+## membran-keypad-v-1_0 
+
+This sketch uses a 4x4 membran keyboard. 
+It captures the key pressed and prints it to the serial output.
+
+![distance-measurement-v-1_0_bb.png](membran-keypad-v-1_0/membran-keypad-v-1_0_bb.png)
 
 
