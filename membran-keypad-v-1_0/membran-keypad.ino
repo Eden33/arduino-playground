@@ -10,7 +10,7 @@ byte colPins[] = {5, 4, 3, 2};
 
 char previousKeyPressed;
 char currentKeyPressed;
-unsigned long startTime = 10;
+unsigned long latestKeyPressedTime = 0;
 
 void setup(){
   Serial.begin(9600);
@@ -38,7 +38,7 @@ void setup(){
 
 void loop(){
 
-  if((millis() - startTime) > 10) {
+  if((millis() - latestKeyPressedTime) > 10) {
     determineCurrentKeyPressed();
     
     if(currentKeyPressed != previousKeyPressed) {
@@ -47,7 +47,7 @@ void loop(){
       previousKeyPressed = currentKeyPressed;
     }
 
-    startTime = millis();
+    latestKeyPressedTime = millis();
   }
 }
 
