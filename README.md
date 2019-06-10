@@ -47,4 +47,8 @@ It captures the key pressed and prints it to the serial output.
 
 ![distance-measurement-v-1_0_bb.png](membran-keypad-v-1_0/membran-keypad-v-1_0_bb.png)
 
+## temperature-and-humidity-v-1_0
 
+This sketch uses a DHT11 temperature and humidity sensor. It reads in a 2 seconds interval the temperature and humidity from the sensor and prints it to the serial output.
+
+![temperature-and-humidity-v-1_0_bb.png](temperature-and-humidity-v-1_0/temperature-and-humidity-v-1_0_bb.png)
