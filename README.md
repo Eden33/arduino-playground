@@ -52,3 +52,12 @@ It captures the key pressed and prints it to the serial output.
 This sketch uses a DHT11 temperature and humidity sensor. It reads in a 2 seconds interval the temperature and humidity from the sensor and prints it to the serial output.
 
 ![temperature-and-humidity-v-1_0_bb.png](temperature-and-humidity-v-1_0/temperature-and-humidity-v-1_0_bb.png)
+
+## joystick-v-1_0
+
+This sketch uses a KY-023 joystick. It demonstrates:
+- How to read data from the joystick and print it to serial out.
+- How to use registers to change the pin mode and write or read from the pins. 
+
+![joystick-v-1_0_bb.png](joystick-v-1_0/joystick-v-1_0_bb.png)
+
