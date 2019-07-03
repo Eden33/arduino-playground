@@ -1,5 +1,26 @@
 #include <Arduino.h>
 
+//TODO: how much do we really need?
+#define RAWBUF 100 // Length of raw duration buffer
+
+typedef struct {
+  uint8_t rcvstate;           // state machine
+  unsigned int timer;         // state timer, counts 50uS ticks.
+  unsigned int rawbuf[RAWBUF];   // raw data
+  uint8_t rawlen;             // counter of entries in rawbuf
+} 
+irparams_t;
+
+volatile irparams_t irparams;
+
+// receiver states
+#define STATE_IDLE     2
+#define STATE_MARK      3
+#define STATE_SPACE    4
+#define STATE_STOP     5
+
+volatile int pinStatus = 0;
+
 void setup() {
   Serial.begin(9600);
  
@@ -35,16 +56,50 @@ void setup() {
 
   // enable interrupts
   SREG = cSREG;
+
+  // initialize IR receiver status
+  irparams.rcvstate = STATE_IDLE;
+  irparams.timer = 0;
+  irparams.rawlen = 0;
+
 }
 
 void loop() {}
 
-volatile unsigned long ctr = 0;
-
 ISR(TIMER2_COMPA_vect) {
-  ctr++;
-  if(ctr == 100000) {
-    Serial.println("5 seconds");
-    ctr = 0;
+
+  pinStatus = digitalRead(11);
+
+  irparams.timer++; // One more 50 microsecond tick
+
+  // The IR sender/receiver communicate in 38 kHz frequency range.
+  // This means the data is transmitted with a speed of 1 / 38.000 = 0,0000263 = 26,3 microseconds 
+
+  // the data pin is HIGH by default
+  // if(irparams.timer % 50000 == 0) {
+  //   Serial.print("Pin status: ");
+  //   Serial.println(pinStatus);
+  // }
+
+  switch(irparams.rcvstate) {
+    case STATE_IDLE: 
+      // in case we received LOW for more than 550 microseconds
+      if (pinStatus == LOW && irparams.timer >= 11) {
+          irparams.rawbuf[0] = irparams.timer;
+          irparams.rcvstate = STATE_MARK;
+          irparams.rawlen++;
+          irparams.timer = 0;
+          Serial.println("Switch to STATE_MARK");
+      }
+      break;
+  default:
+      if(pinStatus == HIGH && irparams.rcvstate == STATE_MARK
+            && irparams.timer > 50000) {
+        Serial.println("Switch to STATE_IDLE");
+        irparams.rcvstate = STATE_IDLE;
+        irparams.rawlen = 0;
+        irparams.timer = 0;
+      }
+    break;
   }
 }
