@@ -9,7 +9,7 @@ typedef struct {
   unsigned int timer;             // state timer, counts 50uS ticks.
   unsigned int rawbuf[RAWBUF];    // raw data
   uint8_t rawlen;                 // counter of entries in rawbuf
-} 
+}
 irparams_t;
 
 volatile irparams_t irparams;
@@ -64,13 +64,27 @@ void setup() {
 }
 
 void loop() {
-
   if(irparams.rcvstate == STATE_STOP) {
+    if(translateCapturedData()) {
+      printKeyPressed();
+    }
+
+    // To capture the next transmittion we need to make sure that 
+    // there is enough delay between current stop state and the time 
+    // before we start recording the next transmittion.
+    // A normal NEC transmission takes in total 67,5 milliseconds
+    // whereas a repeat transmission takes 108 milliseconds.
+    delay(110);
+
+    resetStateMachine();
+  }
+}
+
+boolean translateCapturedData() {
     offset = 0;
     receivedData = 0;
 
-    Serial.println("STATE_STOP.");
-    printCapturedTimingInfo();
+    // printCapturedTimingInfo();
 
     // Be graceful 100 microseconds into both directions while
     // checking the NEC transmission timeframes due to sensor lags.
@@ -79,8 +93,7 @@ void loop() {
     // and repeat code transmissions. In 9 ms the IR triggered 180 times.
     if (irparams.rawbuf[offset] < (180 - 2)  || irparams.rawbuf[offset] > (180 + 2)) {
       Serial.println("Leading pulse error.");
-      resetStateMachine();
-      return;
+      return false;
     }
 
     offset++;
@@ -94,16 +107,13 @@ void loop() {
       // followed by 2,25 milliseconds timeframe instead of 4,5.
       // In 2,25 milliseconds the IR triggered 45 times.
       if(irparams.rawbuf[offset] > (45 - 2)  || irparams.rawbuf[offset] < (45 + 2)) {
-        Serial.println("This is a repeat transmission.");
-
-        //TODO: handle me
-
-        resetStateMachine();
+        // Serial.println("This is a repeat transmission.");
+        receivedData = 0xFFFFFFFF;
+        return true;
       }
 
       Serial.println("Space error after leading pulse.");
-      resetStateMachine();
-      return;
+      return false;
     }
 
     offset++;
@@ -119,8 +129,7 @@ void loop() {
         Serial.println(i);
         Serial.print("Invalid timeframe value: ");
         Serial.println(irparams.rawbuf[offset]);
-        resetStateMachine();
-        return;
+        return false;
       }
       offset++;
       if(irparams.rawbuf[offset] > (11 - 2)  && irparams.rawbuf[offset] < (11 + 2)) {
@@ -132,16 +141,11 @@ void loop() {
         Serial.println(i);
         Serial.print("Invalid timeframe value: ");
         Serial.println(irparams.rawbuf[offset]);
-        resetStateMachine();
-        return;
+        return false;
       }
       offset++;
     }
-    
-    printKeyPressed();
-
-    resetStateMachine();
-  }
+    return true;
 }
 
 void resetStateMachine() {
