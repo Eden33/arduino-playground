@@ -61,3 +61,8 @@ This sketch uses a KY-023 joystick. It demonstrates:
 
 ![joystick-v-1_0_bb.png](joystick-v-1_0/joystick-v-1_0_bb.png)
 
+## infrared-send-receive-v-1_0
+
+This sketch decodes the NEC protocol it receives from a remote control and prints the pressed button to the serial out. The receiver used is a AX-1838HS on a breakout board.
+
+![infrared-send-receive-v-1_0_bb.png](infrared-send-receive-v-1_0/infrared-send-receive-v-1_0_bb.png)
