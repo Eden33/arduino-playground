@@ -56,7 +56,7 @@ boolean translateCapturedData() {
     offset = 0;
     receivedData = 0;
 
-    printCapturedTimingInfo();
+    // printCapturedTimingInfo();
 
     // Be graceful 150 microseconds into both directions while
     // checking the NEC transmission timeframes due to sensor lags.
