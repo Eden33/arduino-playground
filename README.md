@@ -57,7 +57,7 @@ This sketch uses a DHT11 temperature and humidity sensor. It reads in a 2 second
 
 This sketch uses a KY-023 joystick. It demonstrates:
 - How to read data from the joystick and print it to serial out.
-- How to use registers to change the pin mode and write or read from the pins. 
+- How to use registers to change the pin mode and write or read to/from the pins.
 
 ![joystick-v-1_0_bb.png](joystick-v-1_0/joystick-v-1_0_bb.png)
 
