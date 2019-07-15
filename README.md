@@ -63,6 +63,14 @@ This sketch uses a KY-023 joystick. It demonstrates:
 
 ## infrared-send-receive-v-1_0
 
-This sketch decodes the NEC protocol it receives from a remote control and prints the pressed button to the serial out. The receiver used is a AX-1838HS on a breakout board.
+This sketch decodes the NEC protocol it receives from a remote control and prints the pressed button to the serial out. The infrared receiver used is a AX-1838HS on a breakout board. To catch the NEC data we use a timer 2 interrupt in CTC mode.
 
 ![infrared-send-receive-v-1_0_bb.png](infrared-send-receive-v-1_0/infrared-send-receive-v-1_0_bb.png)
+
+## infrared-send-receive-v-1_1
+
+This sketch is a copy of the sketch you can find in infrared-send-receive-v-1_0 (= approx. 95 % of the code is the same). However, to capture the NEC data we use an external interrupt handler registered on pin 2. Each time the pin changes from HIGH to LOW or vice versa we remember the timing using the state machine.
+
+![infrared-send-receive-v-1_1_bb.png](infrared-send-receive-v-1_1/infrared-send-receive-v-1_1_bb.png)
+
+
