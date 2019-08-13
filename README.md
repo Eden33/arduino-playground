@@ -73,4 +73,9 @@ This sketch is a copy of the sketch you can find in infrared-send-receive-v-1_0 
 
 ![infrared-send-receive-v-1_1_bb.png](infrared-send-receive-v-1_1/infrared-send-receive-v-1_1_bb.png)
 
+## led-display-8x8-v-1_0
+
+This sketch uses a MAX7219 and a 8x8 LED matrix. The LED states are pushed via SPI (Serial Peripheral Interface) to the MAX7219 who orchestrates the LEDs.
+
+![led-display-8x8-v-1_0.gif](led-display-8x8-v-1_0/led-display-8x8-v-1_0.gif)
 

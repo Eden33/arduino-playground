@@ -1,0 +1,6 @@
+{
+    "board": "arduino:avr:uno",
+    "port": "COM3",
+    "sketch": "led-display-8x8-v-1_0.ino",
+    "output": "build"
+}
