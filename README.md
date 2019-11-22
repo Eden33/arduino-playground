@@ -79,3 +79,18 @@ This sketch uses a MAX7219 and a 8x8 LED matrix. The LED states are pushed via S
 
 ![led-display-8x8-v-1_0.gif](led-display-8x8-v-1_0/led-display-8x8-v-1_0.gif)
 
+## pull-up-pull-down-resistor-v-1_0
+
+Understand pull-up/pull-down resistors.
+
+Pull down resistor:
+
+![pull-down-external.jpg](pull-up-pull-down-resistor-v-1_0/pull-down-external.jpg)
+
+Pull up resistor:
+
+![pull-up-external.jpg](pull-up-pull-down-resistor-v-1_0/pull-up-external.jpg)
+
+Pull up resistor (use build in resistor part of the pin):
+
+![pull-up-external.jpg](pull-up-pull-down-resistor-v-1_0/pull-up-internal.jpg)

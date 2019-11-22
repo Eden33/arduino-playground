@@ -1,0 +1,6 @@
+{
+    "board": "arduino:avr:uno",
+    "port": "COM3",
+    "sketch": "pull-up-pull-down-resistor-v-1_0.ino",
+    "output": "build"
+}
