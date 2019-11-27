@@ -30,7 +30,9 @@ To compile this sketch you must install this Arduino libraries first:
 
 [Link to the code.](./timer-multi-tasking-v-1_0)
 
-This sketch requires same breadboard setup than sketch timer-multi-tasking-v_1_1. The sketch uses a timer interrupt service routine to update the LEDs and the servo in a 1 millisecond interval. The servo is not updated in case the button connected to pin 2 is pressed. 
+This sketch uses a timer interrupt service routine to update the LEDs and the servo in a 1 millisecond interval. The servo is not updated in case the button connected to pin 2 is pressed. 
+
+<img src="./timer-multi-tasking-v-1_1/timer-multi-tasking-v-1_1_bb.png" width="500" alt="timer-multi-tasking-v-1_1_bb.png">
 
 To compile this sketch you must install this Arduino libraries first:
 - [Sweeper2 Arduino lib] (https://github.com/Eden33/arduino-lib-sweeper2)
@@ -40,15 +42,13 @@ To compile this sketch you must install this Arduino libraries first:
 
 [Link to the code.](./timer-multi-tasking-v-1_1)
 
-This sketch is an extended version of timer-multi-tasking-v_1_0. Instead of preventing the update of the servo a reset is executed each time the button is pressed. This behavior is triggered by an external interrupt handler registered on pin 2.
+This sketch is an extended version of <a href="#timer-multi-tasking-v-1_0">timer-multi-tasking-v-1_0</a> and requires same breaboard configuration. Instead of preventing the update of the servo a reset is executed each time the button is pressed. This behavior is triggered by an external interrupt handler registered on pin 2.
+
+![timer-multi-tasking-v_1_1.gif](timer-multi-tasking-v-1_1/timer-multi-tasking-v-1_1.gif)
 
 To compile this sketch you must install this Arduino libraries first:
 - [Sweeper2 Arduino lib] (https://github.com/Eden33/arduino-lib-sweeper2)
 - [Flasher2 Arduino lib] (https://github.com/Eden33/arduino-lib-flasher2)
-
-![timer-multi-tasking-v_1_1.gif](timer-multi-tasking-v-1_1/timer-multi-tasking-v-1_1.gif)
-
-<img src="./timer-multi-tasking-v-1_1/timer-multi-tasking-v-1_1_bb.png" width="500" alt="timer-multi-tasking-v-1_1_bb.png">
 
 ## distance-measurement-v-1_0
 
@@ -98,7 +98,7 @@ This sketch decodes the NEC protocol it receives from a remote control and print
 
 [Link to the code.](./infrared-send-receive-v-1_1)
 
-This sketch is a copy of the sketch you can find in infrared-send-receive-v-1_0 (= approx. 95 % of the code is the same). However, to capture the NEC data we use an external interrupt handler registered on pin 2. Each time the pin changes from HIGH to LOW or vice versa we remember the timing using the state machine.
+This sketch is a copy of the sketch you can find in <a href="#infrared-send-receive-v-1_0">infrared-send-receive-v-1_0</a> (= approx. 95 % of the code is the same). However, to capture the NEC data we use an external interrupt handler registered on pin 2. Each time the pin changes from HIGH to LOW or vice versa we remember the timing using the state machine.
 
 <img src="./infrared-send-receive-v-1_1/infrared-send-receive-v-1_1_bb.png" width="400" alt="infrared-send-receive-v-1_1_bb.png">
 
