@@ -128,3 +128,13 @@ Pull up resistor (use build in resistor part of the pin):
 
 <img src="./pull-up-pull-down-resistor-v-1_0/pull-up-internal.jpg" width="500" alt="pull-up-internal.jpg">
 
+## imu-v-1_0
+
+[Link to the code.](./imu-v-1_0)
+
+This sketch uses a GY-521 IMU device (= Inertia Measurement Unit) that ships with a gyroscope and accelerometer which are build in sensors (so called MEMS = Micro Elecrical Mechanical Systems) available on the device. The GY-521 uses a standard I2C bus for data transmission. The Arduino is a master and the GY-521 is a slave on that bus. The raw data the GY-521 returns to the Arduino is used to calculate the current orientation of the breadboard (= X- and Y-axis). Last but not least the calculated data is visualized in real time with help of a LCD 1602 module which is also part of the breadboard configuration.
+
+![imu-v-1_0.gif](imu-v-1_0/imu-v-1_0.gif)
+
+<img src="./imu-v-1_0/imu-v-1_0_bb.png" width="400" alt="imu-v-1_0_bb.png">
+
