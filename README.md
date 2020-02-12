@@ -139,3 +139,14 @@ This sketch uses a GY-521 IMU device (= Inertia Measurement Unit) that ships wit
 
 <img src="./imu-v-1_0/imu-v-1_0_bb.png" width="400" alt="imu-v-1_0_bb.png">
 
+## pir-v-1_0
+
+[Link to the code.](./pir-v-1_0)
+
+This sketch uses a HC-SR501 PIR sensor (= Passive Infrared Sensor) to detect motion. The current status is displayed on a LCD 1602 module also part of the breadboard configuration. Once the Arduino is powered on 60 seconds are granted to the PIR sensor to bootstrap its functionality (in this timeframe the sensor may output wrong results according to the data sheet; therefore we wait). After that time period "No motion." will be displayed on the LCD display in case no motion is detected. Once motion is detected "Motion detected." will be displayed on the LCD display for 3 seconds. After the 3 seconds the PIR sensor will be idle (= blocks further motion detection) for another 3 seconds which is also displayed on the LCD display indicated by a countdown. Once the idle time is over next motion can be detected.
+
+The PIR configuration required is described with help of images you can find in the sketch.
+
+![pir-v-1_0.gif](pir-v-1_0/pir-v-1_0.gif)
+
+<img src="./pir-v-1_0/pir-v-1_0_bb.png" width="400" alt="pir-v-1_0_bb.png">
