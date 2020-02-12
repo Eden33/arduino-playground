@@ -13,6 +13,7 @@ This project contains the following Arduino sketches:
 * <a href="#led-display-8x8-v-1_0">led-display-8x8-v-1_0</a>
 * <a href="#pull-up-pull-down-resistor-v-1_0">pull-up-pull-down-resistor-v-1_0</a>
 * <a href="#imu-v-1_0">imu-v-1_0</a>
+* <a href="#pir-v-1_0">pir-v-1_0</a>
 
 ## simple-multi-tasking
 
