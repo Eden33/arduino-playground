@@ -14,6 +14,7 @@ This project contains the following Arduino sketches:
 * <a href="#pull-up-pull-down-resistor-v-1_0">pull-up-pull-down-resistor-v-1_0</a>
 * <a href="#imu-v-1_0">imu-v-1_0</a>
 * <a href="#pir-v-1_0">pir-v-1_0</a>
+* <a href="#water-level-sensor-v-1_0">water-level-sensor-v-1_0</a>
 
 ## simple-multi-tasking
 
@@ -151,3 +152,11 @@ The PIR configuration required is described with help of images you can find in 
 ![pir-v-1_0.gif](pir-v-1_0/pir-v-1_0.gif)
 
 <img src="./pir-v-1_0/pir-v-1_0_bb.png" width="400" alt="pir-v-1_0_bb.png">
+
+## water-level-sensor-v-1_0
+
+[Link to the code.](./water-level-sensor-v-1_0)
+
+This sketch uses a water level sensor that can be used to monitor water level. The sketch is very simple. We just read the analog data from the sensor which indicates the current water level. This information is printed in a 1 second interval to serial out.
+
+ <img src="./water-level-sensor-v-1_0/water-level-sensor-v-1_0_bb.png" width="400" alt="pir-v-1_0_bb.png">

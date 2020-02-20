@@ -1,0 +1,6 @@
+{
+    "board": "arduino:avr:uno",
+    "port": "COM3",
+    "sketch": "water-level-sensor-v-1_0.ino",
+    "output": "build"
+}
