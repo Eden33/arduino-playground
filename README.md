@@ -175,7 +175,7 @@ This sketch is centered around a real time clock (= DS3231); a so called RTC. To
 
 ## sound-v-1_0
 
-[Link to the code.](./rtc-v-1_0)
+[Link to the code.](./sound-v-1_0)
 
 This sketch uses the sound sensor module KY-037 to measure sound. The measured sound is visualized with help of a MAX7219 that controls a 8x8 LED matrix also part of the breadboard configuration. The 3 buttons on the breadboard can be used for configuration. The single button on the right hand side triggers recalibration of the background noise which should not be visualized. The button group on the left hand side can be used to calibrate the sensitivity of the sound level visualization on the LED matrix. The left button increases the sensitivity and the right button decreases the sensitivity each time you press the button.
 
