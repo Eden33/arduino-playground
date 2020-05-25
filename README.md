@@ -16,6 +16,7 @@ This project contains the following Arduino sketches:
 * <a href="#pir-v-1_0">pir-v-1_0</a>
 * <a href="#water-level-sensor-v-1_0">water-level-sensor-v-1_0</a>
 * <a href="#rtc-v-1_0">rtc-v-1_0</a>
+* <a href="#sound-v-1_0">sound-v-1_0</a>
 
 ## simple-multi-tasking
 
@@ -171,3 +172,13 @@ This sketch is centered around a real time clock (= DS3231); a so called RTC. To
 ![rtc-v-1_0.gif](rtc-v-1_0/rtc-v-1_0.gif)
 
 <img src="./rtc-v-1_0/rtc-v-1_0_bb.png" width="400" alt="rtc-v-1_0_bb.png">
+
+## sound-v-1_0
+
+[Link to the code.](./rtc-v-1_0)
+
+This sketch uses the sound sensor module KY-037 to measure sound. The measured sound is visualized with help of a MAX7219 that controls a 8x8 LED matrix also part of the breadboard configuration. The 3 buttons on the breadboard can be used for configuration. The single button on the right hand side triggers recalibration of the background noise which should not be visualized. The button group on the left hand side can be used to calibrate the sensitivity of the sound level visualization on the LED matrix. The left button increases the sensitivity and the right button decreases the sensitivity each time you press the button.
+
+![sound-v-1_0.gif](sound-v-1_0/sound-v-1_0.gif)
+
+<img src="./sound-v-1_0/sound-v-1_0_bb.png" width="400" alt="sound-v-1_0_bb.png">
