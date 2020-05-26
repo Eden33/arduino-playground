@@ -1,6 +1,6 @@
 // the KY-037 PIN and max analog value it may return
 static const uint8_t pinSoundSensor = A0;
-static const int soundSensorMaxAnalogValue = 1024;
+static const int soundSensorMaxAnalogValue = 1023;
 
 // variables to measure and control the noise
 // of the KY-037 sound sensor
