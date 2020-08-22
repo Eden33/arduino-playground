@@ -193,8 +193,8 @@ This sketch uses a RFID-RC522 reader module, a MIFARE Classic 1K card/tag and a 
 * The current scan counter is reset to 0 each time it exceeds 3.
 * The current state of the program is visualized with help of the LCD module. The messages:
   * No RFID tag detected. -> The reader module waits for a card.
-    * RFID scanned "x" times. -> The reader module read the card, incremented the counter by 1 and displays the new scan count "x".
- * Reset scan counter. -> The reader module read the card, incremented the counter by 1 and reset the scan counter to 0 because the new value would exceed 3.
+  * RFID scanned "x" times. -> The reader module read the card, incremented the counter by 1 and displays the new scan count "x".
+  * Reset scan counter. -> The reader module read the card, incremented the counter by 1 and reset the scan counter to 0 because the new value would exceed 3.
 ** Error messages (e.g. in case RFID auth, read or write failed).
 
 ![rfid-v-1_0.gif](rfid-v-1_0/rfid-v-1_0.gif)
