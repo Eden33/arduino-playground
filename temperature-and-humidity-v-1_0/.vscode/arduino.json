@@ -1,6 +1,6 @@
 {
     "board": "arduino:avr:uno",
     "port": "COM3",
-    "sketch": "temperature-and-himidity-v-1_0.ino",
+    "sketch": "temperature-and-humidity-v-1_0.ino",
     "output": "build"
 }

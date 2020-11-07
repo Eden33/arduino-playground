@@ -3,15 +3,13 @@
 byte data[5];
 static const int dataPin = 2;
 
-unsigned long pinStatusCheckStartMicros = 0;
-unsigned long pinStatusCheckRandMicros = 0;
-unsigned long pinStatusInMicros = 0;
-
 void setup() {
     Serial.begin(9600);
 }
 
 void loop() {
+
+    unsigned long pinStatusInMicros = 0;
 
     //testBitOperationsNeeded();
     //return;
@@ -123,6 +121,9 @@ void loop() {
  * The returned time frame is an approximated value that will be lower than it was in real.
  **/ 
 long getPinStatusInMicros(int expectedPinStatus) {
+    unsigned long pinStatusCheckStartMicros = 0;
+    unsigned long pinStatusCheckRandMicros = 0;
+
     pinStatusCheckStartMicros = micros();
     pinStatusCheckRandMicros = pinStatusCheckStartMicros;
 
