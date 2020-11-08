@@ -91,7 +91,7 @@ This sketch uses a DHT11 temperature and humidity sensor + a thermistor. Each 2 
 
 <img src="./temperature-and-humidity-v-2_0/temperature-and-humidity-v-2_0_bb.png" width="500" alt="temperature-and-humidity-v-2_0_bb.png">
 
-*Please note:*
+**Please note:**
 The temperature "measured" by the thermistor is derived with help of the Steinhart–Hart equation. The  coefficients used in the Steinhart–Hart equation depend on the thermistor used.
 
 ## joystick-v-1_0
