@@ -7,6 +7,7 @@ This project contains the following Arduino sketches:
 * <a href="#distance-measurement-v-1_0">distance-measurement-v-1_0</a>
 * <a href="#membran-keypad-v-1_0">membran-keypad-v-1_0</a>
 * <a href="#temperature-and-humidity-v-1_0">temperature-and-humidity-v-1_0</a>
+* <a href="#temperature-and-humidity-v-2_0">temperature-and-humidity-v-2_0</a>
 * <a href="#joystick-v-1_0">joystick-v-1_0</a>
 * <a href="#infrared-send-receive-v-1_0">infrared-send-receive-v-1_0</a>
 * <a href="#infrared-send-receive-v-1_1">infrared-send-receive-v-1_1</a>
@@ -81,6 +82,17 @@ It captures the key pressed and prints it to the serial output.
 This sketch uses a DHT11 temperature and humidity sensor. It reads in a 2 seconds interval the temperature and humidity from the sensor and prints it to the serial output.
 
 <img src="./temperature-and-humidity-v-1_0/temperature-and-humidity-v-1_0_bb.png" width="500" alt="temperature-and-humidity-v-1_0_bb.png">
+
+## temperature-and-humidity-v-2_0
+
+[Link to the code.](./temperature-and-humidity-v-2_0)
+
+This sketch uses a DHT11 temperature and humidity sensor + a thermistor. Each 2 seconds the latest temperature is fetched from both components and visualized using a LCD 1602 module which is also part of the breadboard configuration. The result looks like the following:
+
+<img src="./temperature-and-humidity-v-2_0/temperature-and-humidity-v-2_0_bb.png" width="500" alt="temperature-and-humidity-v-2_0_bb.png">
+
+*Please note:*
+The temperature "measured" by the thermistor is derived with help of the Steinhart–Hart equation. The  coefficients used in the Steinhart–Hart equation depend on the thermistor used.
 
 ## joystick-v-1_0
 
